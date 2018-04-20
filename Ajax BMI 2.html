@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://24583.hosts.ma-cloud.nl/bewijzenmap/periode1.3/fro/ajax2/index.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Ajax BMI 2</title>
+		<link rel="stylesheet" type="text/css" href="./Ajax BMI 2_files/index.css">
+	</head>
+	<body>
+		<div id="main">
+			<h3>Weight (kg):</h3>&nbsp;<input type="number" id="weight">
+			<h3>Height (cm):</h3>&nbsp;<input type="number" id="height">
+			<button onclick="bmiCalc()">Calculate</button>
+			<span id="bmiSpan"></span>
+		</div>
+		<script>
+		function bmiCalc() {
+			var weight = document.getElementById("weight").value;
+			var height = document.getElementById("height").value;
+
+			var xhttp;
+
+			if ((weight.length == 0) || (height.length == 0)) {
+				document.getElementById("bmiSpan").innerHTML = "";
+				return;
+			}
+
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("bmiSpan").innerHTML = this.responseText;
+				}
+			};
+
+			xhttp.open("GET", "bmiCalc.php?weight=" + weight + "&height=" + height, true);
+			xhttp.send();
+		}
+		</script>
+		<div class="bmi">
+			<img src="./Ajax BMI 2_files/bmi.jpg">
+		</div>
+	
+
+<script type="text/javascript">function d_log (s) {
+                var ev = document.createEvent('events');
+                ev.initEvent('heartbeat_log', true, false);
+                document.body.setAttribute('heartbeat_attrib', s);
+                document.dispatchEvent(ev);
+            };</script><div id="heartbeat_msg_wrap"></div></body></html>
