@@ -1,0 +1,135 @@
+html, body, h3 {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header, aside {
+  background-color: lightblue;
+}
+
+header{
+  padding: 2em;
+}
+
+h1, h3 {font-family: 'PT Sans';}
+h1, tagline {color: #47a;}
+
+section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;
+}
+
+.nummer {
+  background-color: #47a;
+  color: #fff;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em;
+}
+
+article {
+  padding: 1em;
+
+}
+
+section img {
+  max-width: 100%;
+}
+
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside h3 {
+  background-color: #47a;
+  padding: 2em;
+  color: #fff;
+}
+
+aside a {
+  text-decoration: none;
+  background-color: lightblue;
+  padding: 2em;
+  display: block;
+}
+
+aside a:hover {
+  background-color: #47a;
+  color: #fff;
+}
+
+footer {
+  background-color: darkgrey;
+  color: #eee;
+  padding: 2em;
+}
+
+@media screen and (min-width: 760px) {
+  .afb {
+    display: block;
+    background-image: url('img/student.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "kop kop"
+    "TIP1 TIP2"
+    "TIP3 TIP4"
+    "TIP3 TIP5"
+    "afb TIP6"
+    "TIP7 aside"
+    "TIP8 aside"
+    "TIP9 aside"
+    "TIP10 aside"
+    "feet feet";
+}
+  header (grid-area: kop;)
+  .agenda (grid-area: TIP1;)
+  .opschrijfboek (grid-area: TIP2;)
+  .een-ding (grid-area: TIP3;)
+  .prioriteiten (grid-area: TIP4;)
+  .afb (grid-area: afb;)
+  .geen-uitstel (grid-area: TIP5;)
+  .werkplanning (grid-area: TIP6;)
+  .opruimen (grid-area: TIP7;)
+  .aandacht (grid-area: TIP8;)
+  .centraal (grid-area: TIP9;)
+  .afwisseling  (grid-area: TIP10;)
+  aside (grid-area: aside;)
+  footer (grid-area: feet;)
+
+  h1 {font-size: 2.6em;}
+
+  .agenda_article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+
+  .agenda_article h3 {grid-column: span 2;}
+
+  footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  }
+}
+@media screen and (min-width:1000px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "kop kop kop"
+    "TIP1 TIP2 afb"
+    "TIP3 TIP4 afb"
+    "TIP3 TIP5 afb"
+    "aside TIP6 TIP6 "
+    "aside TIP7 TIP8"
+    "aside TIP9 TIP10"
+    "aside feet feet";
+}
+}
