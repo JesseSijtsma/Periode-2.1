@@ -1,0 +1,98 @@
+html {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #e6eaf2;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+nav {
+  position: fixed;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  display: block;
+  padding: .5em 1.5em .5em 1em;
+  margin: .5em;
+  border-left: 5px solid white;
+  border-radius: 0 1em 1em 0;
+}
+
+nav a:hover {
+  color: black;
+  background-color: white;
+  border-left: 5px solid transparent;
+}
+
+section {
+  min-height: 100vh;
+  padding: 2em 2em 2em 9em;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #9ea0a3;
+}
+
+a:hover {
+  color: #00faff;
+}
+
+#rood {
+  background-color: #b70c0c;
+ }
+#groen {
+  background-color: #0d893d;
+ }
+#blauw {
+  background-color: #0a4087;
+ }
+#oranje {
+  background-color: #eda50b;
+ }
+#geel {
+  background-color: #f2d72b;
+  color: #3b3d42;
+ }
+
+footer {
+  background-color: grey;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}

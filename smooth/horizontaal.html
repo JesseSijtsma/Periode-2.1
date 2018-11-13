@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jesse Sijtsma">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Smooth scrolling</title>
+    <style media="screen">
+
+      html {
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+      }
+
+      main {
+        width: 500vw;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      section {
+        box-sizing: border-box;
+        height: 100vh;
+        overflow: auto;
+      }
+
+      section-img {
+        max-width: 100%;
+        margin: 1em 0;
+      }
+
+      #blauw {
+        display: block;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#rood">rood</a></li>
+        <li><a href="#groen">groen</a></li>
+        <li><a href="#blauw">blauw</a></li>
+        <li><a href="#oranje">oranje</a></li>
+        <li><a href="#geel">geel</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="rood"><h2>Rood horizontaal</h2>
+        <p>Dit is de rode pagina.<br>
+          Een link naar <a href="index.html">de vertikale versie</a>
+        </p>
+      </section>
+      <section id="groen"><h2>Groen horizontaal</h2>
+        <p>Dit is de groene pagina.<br>
+        Een link naar <a href="index.html">de vertikale versie</a>
+        </p>
+      </section>
+      <section id="blauw"><h2>Blauw horizontaal</h2>
+        <p>Dit is de blauwe pagina.<br>
+        Een link naar <a href="index.html">de vertikale versie</a>
+        </p>
+        <div class="inhoud">
+          <img src="http://luxe-auto.nl/wp-content/uploads/2016/09/bmw-1-serie-huren.png" alt="BMW">
+          <img src="https://www.sixt.nl/fileadmin/_processed_/csm_volvo-xc90-5d-schwarz-2016_copy_f44778eb5b.png" alt="VOLVO">
+          <img src="https://auto.ndtvimg.com/car-images/big/mercedes-amg/s-63-coupe/mercedes-amg-s-63-coupe.webp?v=6" alt="MERCEDES">
+        </div>
+      </section>
+      <section id="oranje"><h2>Oranje horizontaal</h2>
+        <p>Dit is de oranje pagina.<br>
+        Een link naar <a href="index.html">de vertikale versie</a>
+        </p>
+      </section>
+      <section id="geel"><h2>Geel horizontaal</h2>
+        <p>Dit is de gele pagina.<br>
+        Een link naar <a href="index.html">de vertikale versie</a>
+        </p>
+      </section>
+    </main>
+    <footer>
+        <a href="http://validator.w3.org/check?uri=referer" target="_blank">
+          <img src="https://blanken5.home.xs4all.nl/afb/valid-html5-blue.png" alt="Valide HTML5"></a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss-blue.gif" alt="Valide CSS">
+        </a>
+    </footer>
+  </body>
+</html>
